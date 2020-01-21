@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact List</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<div class="container-fluid padding">
+			<h1>Contacts</h1>
+		</div>
+	</header>
+
+	<!-- Contacts -->
+	<div id="contactDiv" class="container-fluid padding">
+		<div class="row">
+			<div class="col-xl-6 col-md-12">
+				<!-- Add new contact -->
+				<form>
+					<h2>Create new contact</h2>
+					<ul>
+						<li>
+							<label for="name">Name:</label>
+							<input type="text" id="name"/>
+						</li>
+						<li>
+							<label for="phone">Phone:</label>
+							<input type="text" id="phone"/>
+						</li>
+						<li>
+							<label for="email">Email:</label>
+							<input type="text" id="email"/>
+						</li>
+					</ul>
+				</form>
+				<input type="submit" value="Create new contact" id="saveButton" onclick="addContact()"/>
+			</div>
+			<div class="col-xl-6 col-md-12">
+				<!-- Existing contact list -->
+				<table>
+					<h2>Your contact list</h2>
+					<thead id="tableHead">
+					</thead>
+					<tbody id="tableBody">
+					</tbody>
+				</table>
+				<input type="submit" value="Clear all contacts" id="deleteAllButton" onclick="deleteAllContacts()"/>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="ohCrud.js"></script>
+</html>
